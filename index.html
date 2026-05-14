@@ -92,12 +92,13 @@
     }
     </style>
 
-<section class="carrusel-container" style="border: 8px solid #fce4ec; border-radius: 25px; max-width: 320px; margin: 20px auto; overflow: hidden; position: relative;">
-   <div class="mi-carrusel">
-    <img src="static/img/trabajo1.jpg" style="width: 100%; display: block;">
-
-<img src="static/img/trabajo2.jpg" style="width: 100%; display: block;">
-</div>
+<section class="carrusel-container">
+    <div class="mi-carrusel" style="display: block; width: 100%;">
+        <img src="/static/img/trabajo1.jpg" style="width: 100%; height: 350px; object-fit: cover; border-radius: 15px;">
+    </div>
+    <div class="mi-carrusel" style="display: none; width: 100%;">
+        <img src="/static/img/trabajo2.jpg" style="width: 100%; height: 350px; object-fit: cover; border-radius: 15px;">
+    </div>
 </section>
 
 
@@ -203,12 +204,15 @@
 </script>
 
 <audio id="musicaSpa" loop>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-15.mp3" type="audio/mpeg">
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
 </audio>
 
-<button onclick="controlMusica()" style="position: fixed; bottom: 80px; left: 20px; z-index: 1000; background: #fce4ec; border: none; border-radius: 50%; width: 45px; height: 45px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-    🎵
-</button>
+<div id="controles-musica" style="position: fixed; bottom: 20px; left: 20px; z-index: 1000; text-align: center;">
+    <p style="margin: 0; font-size: 10px; color: #ff8fa3; font-weight: bold;">PULSA AQUÍ ✨</p>
+    <button onclick="controlMusica()" style="background: #fce4ec; border: 2px solid #ff8fa3; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; box-shadow: 0 4px 15px rgba(255, 143, 163, 0.4); font-size: 25px;">
+        🎵
+    </button>
+</div>
 
 <script>
 function controlMusica() {
