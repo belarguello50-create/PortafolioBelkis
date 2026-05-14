@@ -59,6 +59,13 @@
     <img src="static/logo.png" alt="Logo" style="width: 150px;">
 </div>
 
+<section id="presentacion" style="text-align: center; padding: 30px 20px;">
+    <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #555; font-style: italic; line-height: 1.6;">
+        Maquillista Certificada, especialista en resaltar la belleza natural para cualquier tipo de evento. <br>
+        <strong>✨ Servicios a domicilio ✨</strong>
+    </p>
+</section>
+
     <h1>✨ Mis Servicios de Maquillaje ✨</h1>
 
     <div class="contenedor-servicios">
@@ -89,3 +96,36 @@
 
 </body>
 
+<a href="https://wa.me/50576530277?text=Hola%20Belkis,%20vi%20tu%20página%20y%20quiero%20cotizar%20un%20maquillaje%20a%20domicilio" 
+       class="whatsapp-btn" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 60px;">
+    </a>
+
+</body> </html>
+
+/* Estilo del botón flotante */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-btn img {
+    width: 60px;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.2));
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Efecto de brillo para tus tarjetas de servicios */
+/* NOTA: Si tus tarjetas no tienen la clase 'card', cámbialo por el nombre que uses */
+.card:active, .card:hover {
+    box-shadow: 0 0 20px 5px rgba(212, 165, 165, 0.5); 
+    border: 1px solid #d4a5a5;
+    transition: 0.3s ease;
+    transform: translateY(-5px);
+}
