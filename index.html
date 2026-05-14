@@ -59,12 +59,52 @@
     <img src="static/logo.png" alt="Logo" style="width: 150px;">
 </div>
 
+<section id="galeria" class="carrusel-container">
+    <div class="carrusel-slides">
+        <div class="slide fade">
+            <img src="trabajo1.jpg" alt="Maquillaje Profesional Belkis García 1">
+            <div class="text-on-slide">Maquillaje de Graduación</div>
+        </div>
+        <div class="slide fade">
+            <img src="trabajo2.jpg" alt="Maquillaje Profesional Belkis García 2">
+            <div class="text-on-slide">Look Natural y Radiante</div>
+        </div>
+    </div>
+</section>
+
 <section id="presentacion" style="text-align: center; padding: 30px 20px;">
     <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #555; font-style: italic; line-height: 1.6;">
         Maquillista Certificada, especialista en resaltar la belleza natural para cualquier tipo de evento. <br>
         <strong>✨ Servicios a domicilio ✨</strong>
     </p>
 </section>
+
+<style>
+    .carrusel-container {
+        width: 90%;
+        margin: 20px auto;
+        overflow: hidden;
+        border-radius: 15px;
+        position: relative;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .carrusel-slides { display: none; }
+    .carrusel-slides img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+    }
+</style>
+
+<section class="carrusel-container">
+    <div class="carrusel-slides fade">
+        <img src="static/img/trabajo1.jpg">
+    </div>
+    <div class="carrusel-slides fade">
+        <img src="static/img/trabajo2.jpg">
+    </div>
+</section>
+
 
     <h1>✨ Mis Servicios de Maquillaje ✨</h1>
 
@@ -143,6 +183,22 @@
             transform: translateY(-5px);
         }
     </style>
+    <script>
+    let indice = 0;
+    moverCarrusel();
+
+    function moverCarrusel() {
+        let i;
+        let slides = document.getElementsByClassName("carrusel-slides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        indice++;
+        if (indice > slides.length) {indice = 1}    
+        slides[indice-1].style.display = "block";  
+        setTimeout(moverCarrusel, 3000); // Cambia cada 3 segundos
+    }
+</script>
 
 </body>
 </html>
