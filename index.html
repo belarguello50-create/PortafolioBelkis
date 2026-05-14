@@ -1,4 +1,4 @@
-{% load static %}
+
 
 <!DOCTYPE html>
 <html>
@@ -59,16 +59,12 @@
     <img src="static/logo.png" alt="Logo" style="width: 150px;">
 </div>
 
-<section id="galeria" class="carrusel-container">
-    <div class="carrusel-slides">
-        <div class="slide fade">
-            <img src="trabajo1.jpg" alt="Maquillaje Profesional Belkis García 1">
-            <div class="text-on-slide">Maquillaje de Graduación</div>
-        </div>
-        <div class="slide fade">
-            <img src="trabajo2.jpg" alt="Maquillaje Profesional Belkis García 2">
-            <div class="text-on-slide">Look Natural y Radiante</div>
-        </div>
+<section style="border: 8px solid #fce4ec; border-radius: 25px; max-width: 300px; margin: 20px auto; overflow: hidden; position: relative; background-color: white;">
+    <div class="mi-carrusel">
+        <img src="static/img/trabajo1.jpg" style="width: 100%; display: block;">
+    </div>
+    <div class="mi-carrusel" style="display:none;">
+        <img src="static/img/trabajo2.jpg" style="width: 100%; display: block;">
     </div>
 </section>
 
@@ -96,13 +92,13 @@
     }
     </style>
 
-<section class="carrusel-container" style="border: 8px solid #fce4ec; border-radius: 25px; max-width: 350px; margin: 20px auto;">
-    <div class="carrusel-slides fade">
-        <img src="static/img/trabajo1.jpg" style="width: 100%; border-radius: 15px;">
-    </div>
-    <div class="carrusel-slides fade">
-        <img src="static/img/trabajo2.jpg" style="width: 100%; border-radius: 15px;">
-    </div>
+<section class="carrusel-container" style="border: 8px solid #fce4ec; border-radius: 25px; max-width: 320px; margin: 20px auto; overflow: hidden; position: relative;">
+   <div class="mi-carrusel">
+    <img src="/static/img/trabajo1.jpg" style="width: 100%; display: block;">
+</div>
+<div class="mi-carrusel" style="display:none;">
+    <img src="/static/img/trabajo2.jpg" style="width: 100%; display: block;">
+</div>
 </section>
 
 
@@ -183,17 +179,17 @@
             transform: translateY(-5px);
         }
     </style>
-   <script>
-    let slideIndex = 0;
-    showSlides();
-    function showSlides() {
-        let slides = document.getElementsByClassName("carrusel-slides");
-        for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}
-        slides[slideIndex-1].style.display = "block";
-        setTimeout(showSlides, 3000); // Cambia cada 3 segundos
+  <script>
+    let n = 0;
+    function pasarFoto() {
+        let fotos = document.getElementsByClassName("mi-carrusel");
+        for (let i = 0; i < fotos.length; i++) { fotos[i].style.display = "none"; }
+        n++;
+        if (n > fotos.length) { n = 1; }
+        fotos[n-1].style.display = "block";
+        setTimeout(pasarFoto, 3000);
     }
+    pasarFoto();
 </script>
 
 </body>
