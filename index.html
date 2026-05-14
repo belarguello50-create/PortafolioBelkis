@@ -1,4 +1,4 @@
-
+{% load static %}
 
 <!DOCTYPE html>
 <html>
@@ -94,14 +94,14 @@
         height: 350px;
         object-fit: cover;
     }
-</style>
+    </style>
 
-<section class="carrusel-container">
+<section class="carrusel-container" style="border: 8px solid #fce4ec; border-radius: 25px; max-width: 350px; margin: 20px auto;">
     <div class="carrusel-slides fade">
-        <img src="static/img/trabajo1.jpg">
+        <img src="static/img/trabajo1.jpg" style="width: 100%; border-radius: 15px;">
     </div>
     <div class="carrusel-slides fade">
-        <img src="static/img/trabajo2.jpg">
+        <img src="static/img/trabajo2.jpg" style="width: 100%; border-radius: 15px;">
     </div>
 </section>
 
@@ -183,20 +183,16 @@
             transform: translateY(-5px);
         }
     </style>
-    <script>
-    let indice = 0;
-    moverCarrusel();
-
-    function moverCarrusel() {
-        let i;
+   <script>
+    let slideIndex = 0;
+    showSlides();
+    function showSlides() {
         let slides = document.getElementsByClassName("carrusel-slides");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-        }
-        indice++;
-        if (indice > slides.length) {indice = 1}    
-        slides[indice-1].style.display = "block";  
-        setTimeout(moverCarrusel, 3000); // Cambia cada 3 segundos
+        for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 3000); // Cambia cada 3 segundos
     }
 </script>
 
