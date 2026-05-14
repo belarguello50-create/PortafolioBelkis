@@ -177,6 +177,17 @@
             transition: 0.3s ease;
             transform: translateY(-5px);
         }
+
+        .tarjeta-servicio {
+    transition: all 0.4s ease;
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px 10px rgba(252, 228, 236, 0.9) !important;
+    border: 2px solid #fce4ec !important;
+}
+
     </style>
   <script>
     let n = 0;
@@ -191,6 +202,24 @@
     pasarFoto();
 </script>
 
+<audio id="musicaSpa" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-15.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="controlMusica()" style="position: fixed; bottom: 80px; left: 20px; z-index: 1000; background: #fce4ec; border: none; border-radius: 50%; width: 45px; height: 45px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    🎵
+</button>
+
+<script>
+function controlMusica() {
+    var audio = document.getElementById("musicaSpa");
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+}
+</script>
 </body>
 </html>
 
