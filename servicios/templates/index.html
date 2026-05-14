@@ -1,0 +1,91 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        :root {
+            --rosa-principal: #ff85a2;
+            --morado-soft: #b392ac;
+            --fondo: #fff5f7;
+        }
+
+        body {
+            background-color: var(--fondo);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #444;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--rosa-principal);
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .contenedor-servicios {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .tarjeta-servicio {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            width: 280px;
+            box-shadow: 0 10px 20px rgba(255, 133, 162, 0.15);
+            border: 2px solid transparent;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            text-align: center;
+        }
+
+        .tarjeta-servicio:hover {
+            transform: translateY(-10px);
+            border-color: var(--rosa-principal);
+        }
+
+        .precio { font-size: 1.5rem; font-weight: bold; color: var(--rosa-principal); margin: 10px 0; }
+        .duracion { font-style: italic; color: var(--morado-soft); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <!-- EL LOGO (Revisá que el nombre sea logo.png exactamente) -->
+   <div style="text-align: center;">
+    <img src="{% static 'logo.png' %}" alt="Logo" style="width: 150px;">
+</div>
+
+    <h1>✨ Mis Servicios de Maquillaje ✨</h1>
+
+    <div class="contenedor-servicios">
+        <!-- Servicio 1 -->
+        <div class="tarjeta-servicio">
+            <h3>Maquillaje Graduación</h3>
+            <p class="precio">C$ 420</p>
+            <p class="duracion">⏱ 1 hora y 20 minutos</p>
+            <p>¡Resaltá tu belleza natural con este servicio especial!</p>
+        </div>
+        
+        <!-- Servicio 2 -->
+        <div class="tarjeta-servicio">
+            <h3>Maquillaje Natural</h3>
+            <p class="precio">C$ 350</p>
+            <p class="duracion">⏱ 1 hora</p>
+            <p>Un look fresco y radiante para tu día a día.</p>
+        </div>
+
+        <!-- Servicio 3 (AQUÍ ESTÁ EL QUE FALTABA) -->
+        <div class="tarjeta-servicio">
+            <h3>Quinceañera</h3>
+            <p class="precio">C$ 450</p>
+            <p class="duracion">⏱ 1 hora y media</p>
+            <p>Un maquillaje soñado para un día inolvidable.</p>
+        </div>
+    </div>
+
+</body>
+
