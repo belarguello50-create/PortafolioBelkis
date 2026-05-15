@@ -84,21 +84,27 @@
         position: relative;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
-    .carrusel-slides { display: none; }
-    .carrusel-slides img {
-        width: 100%;
-        height: 350px;
-        object-fit: cover;
-    }
-    </style>
+    
+    .mi-carrusel {
+    display: none; /* Escondemos todas por defecto */
+    width: 100%;
+}
 
-<section class="carrusel-container">
-    <div class="mi-carrusel" style="display: block; width: 100%;">
-        <img src="/static/img/trabajo1.jpg" style="width: 100%; height: 350px; object-fit: cover; border-radius: 15px;">
+.mi-carrusel img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+    </style>
+<section class="carrusel-container" style="border: 8px solid #fce4ec; border-radius: 25px; max-width: 300px; margin: 20px auto; overflow: hidden;">
+    <div class="mi-carrusel" style="display: block;">
+        <img src="static/img/trabajo1.jpg">
     </div>
-    <div class="mi-carrusel" style="display: none; width: 100%;">
-        <img src="/static/img/trabajo2.jpg" style="width: 100%; height: 350px; object-fit: cover; border-radius: 15px;">
+    <div class="mi-carrusel">
+        <img src="static/img/trabajo2.jpg">
     </div>
+
 </section>
 
 
