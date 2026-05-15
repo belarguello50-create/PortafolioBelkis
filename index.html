@@ -76,26 +76,26 @@
 </section>
 
 <style>
-    .carrusel-container {
-        width: 90%;
-        margin: 20px auto;
-        overflow: hidden;
-        border-radius: 15px;
-        position: relative;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-    
-    .mi-carrusel {
-    display: none; /* Escondemos todas por defecto */
+    /* Esto va en tu etiqueta <style> */
+.carrusel-container {
     width: 100%;
+    height: 350px; /* RESERVA EL ESPACIO */
+    max-width: 300px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    background-color: #fce4ec; /* Color de fondo mientras carga */
+    border-radius: 25px;
+    border: 8px solid #fce4ec;
 }
 
 .mi-carrusel img {
     width: 100%;
     height: 350px;
     object-fit: cover;
-    border-radius: 15px;
+    display: block;
 }
+
     </style>
 <section class="carrusel-container" style="border: 8px solid #fce4ec; border-radius: 25px; max-width: 300px; margin: 20px auto; overflow: hidden;">
     <div class="mi-carrusel" style="display: block;">
@@ -205,7 +205,7 @@
         setTimeout(pasarFoto, 3000);
     }
     pasarFoto();
-    
+
 </script>
 <section style="padding: 20px; text-align: center;">
     <h2 style="color: #ff8fa3; font-size: 20px;">✨ Mis Habilidades Técnicas ✨</h2>
