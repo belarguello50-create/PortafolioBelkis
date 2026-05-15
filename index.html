@@ -206,32 +206,36 @@
     }
     pasarFoto();
 </script>
-
 <audio id="musica" loop preload="auto">
-    <source src="https://www.chosic.com/wp-content/uploads/2021/07/Rain-and-Flowers.mp3" type="audio/mpeg">
+    <source src="https://assets.mixkit.co/music/preview/mixkit-serene-view-441.mp3" type="audio/mpeg">
 </audio>
 
 <div style="position: fixed; bottom: 20px; left: 20px; z-index: 1000; text-align: center;">
-    <p style="margin: 0; font-size: 11px; color: #ff8fa3; font-weight: bold; text-shadow: 1px 1px 2px white;">✨ PULSA AQUÍ ✨</p>
-    <button onclick="controlMusica()" style="background: #fce4ec; border: 2px solid #ff8fa3; border-radius: 50%; width: 55px; height: 55px; cursor: pointer; box-shadow: 0 4px 12px rgba(255, 143, 163, 0.5); font-size: 22px;">
+    <p style="margin: 0; font-size: 11px; color: #ff8fa3; font-weight: bold;">✨ TOCAME ✨</p>
+    <button id="btnMusica" onclick="reproducirAhora()" style="background: #fce4ec; border: 2px solid #ff8fa3; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; font-size: 25px;">
         🎵
     </button>
 </div>
 
 <script>
-function controlMusica() {
-    var miAudio = document.getElementById("musica");
-    if (miAudio.paused) {
-        miAudio.play().catch(function(error) {
-            console.log("El navegador bloqueó el audio: ", error);
+function reproducirAhora() {
+    var sonido = document.getElementById("musica");
+    var boton = document.getElementById("btnMusica");
+
+    if (sonido.paused) {
+        sonido.play().then(() => {
+            boton.innerText = "⏸️";
+            console.log("Reproduciendo...");
+        }).catch(err => {
+            alert("Por favor, subí el volumen o revisá el silencio de tu cel.");
+            console.log("Error: " + err);
         });
     } else {
-        miAudio.pause();
+        sonido.pause();
+        boton.innerText = "🎵";
     }
 }
-</script>
     
-
 </script>
 </body>
 </html>
