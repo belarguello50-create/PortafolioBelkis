@@ -205,36 +205,35 @@
         setTimeout(pasarFoto, 3000);
     }
     pasarFoto();
+    
 </script>
-<audio id="musica" loop preload="auto">
-    <source src="https://assets.mixkit.co/music/preview/mixkit-serene-view-441.mp3" type="audio/mpeg">
-</audio>
+<section style="padding: 20px; text-align: center;">
+    <h2 style="color: #ff8fa3; font-size: 20px;">✨ Mis Habilidades Técnicas ✨</h2>
+    
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 20px;">
+        
+        <div style="background: white; padding: 15px; border-radius: 15px; width: 100px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #fce4ec;">
+            <span style="font-size: 30px;">🎨</span>
+            <p style="font-size: 12px; font-weight: bold; color: #555; margin-top: 8px;">Colorimetría Avanzada</p>
+        </div>
 
-<div style="position: fixed; bottom: 20px; left: 20px; z-index: 1000; text-align: center;">
-    <p style="margin: 0; font-size: 11px; color: #ff8fa3; font-weight: bold;">✨ TOCAME ✨</p>
-    <button id="btnMusica" onclick="reproducirAhora()" style="background: #fce4ec; border: 2px solid #ff8fa3; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; font-size: 25px;">
-        🎵
-    </button>
-</div>
+        <div style="background: white; padding: 15px; border-radius: 15px; width: 100px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #fce4ec;">
+            <span style="font-size: 30px;">👁️</span>
+            <p style="font-size: 12px; font-weight: bold; color: #555; margin-top: 8px;">Difuminado Perfecto</p>
+        </div>
 
-<script>
-function reproducirAhora() {
-    var sonido = document.getElementById("musica");
-    var boton = document.getElementById("btnMusica");
+        <div style="background: white; padding: 15px; border-radius: 15px; width: 100px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #fce4ec;">
+            <span style="font-size: 30px;">✨</span>
+            <p style="font-size: 12px; font-weight: bold; color: #555; margin-top: 8px;">Preparación de Piel</p>
+        </div>
 
-    if (sonido.paused) {
-        sonido.play().then(() => {
-            boton.innerText = "⏸️";
-            console.log("Reproduciendo...");
-        }).catch(err => {
-            alert("Por favor, subí el volumen o revisá el silencio de tu cel.");
-            console.log("Error: " + err);
-        });
-    } else {
-        sonido.pause();
-        boton.innerText = "🎵";
-    }
-}
+        <div style="background: white; padding: 15px; border-radius: 15px; width: 100px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #fce4ec;">
+            <span style="font-size: 30px;">📐</span>
+            <p style="font-size: 12px; font-weight: bold; color: #555; margin-top: 8px;">Visagismo y Contorno</p>
+        </div>
+
+    </div>
+</section>
     
 </script>
 </body>
